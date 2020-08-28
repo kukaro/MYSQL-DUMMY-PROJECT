@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  travel-diary-mysql-server-project:
+    image: travel-diary-mysql-server-project
+    container_name: travel-diary-mysql-server-project
+    command: mysqld
+    restart: always
+    volumes:
+      - ./shared/:/root/shared/
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD="true"
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'

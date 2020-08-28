@@ -1,0 +1,1 @@
+docker exec -it travel-diary-mysql-server-project /bin/bash
