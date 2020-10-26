@@ -130,3 +130,48 @@ ALTER TABLE friend ADD CONSTRAINT fk_friend_friendid_user_id
     FOREIGN KEY (friend_id) REFERENCES user(id) ON DELETE CASCADE;
 
 ALTER TABLE friend ADD UNIQUE uq_friend (owner_id , friend_id);
+
+create database cs;
+
+create table cs.user_inquiry
+(
+    no             int unsigned auto_increment
+        primary key,
+    type           enum ('C', 'D', 'E', 'M')                          not null,
+    sub_type       varchar(10)                                        null,
+    service_type   varchar(20)          default ''                    null,
+    gabia_id       varchar(50)                                        null,
+    user_name      varchar(50)                                        null,
+    user_email     varchar(90)                                        null,
+    user_hp_no     varchar(90)                                        null,
+    user_domain    varchar(90)                                        null,
+    user_company   varchar(90)                                        null,
+    user_position  varchar(90)                                        null,
+    user_memo      text                                               null,
+    user_field_1   varchar(255)                                       null,
+    user_field_2   varchar(255)                                       null,
+    user_field_3   varchar(255)                                       null,
+    user_field_4   varchar(255)                                       null,
+    user_field_5   varchar(255)                                       null,
+    user_field_6   varchar(255)                                       null,
+    user_field_7   varchar(255)                                       null,
+    user_field_8   varchar(255)                                       null,
+    user_field_9   varchar(255)                                       null,
+    user_field_10  varchar(255)                                       null,
+    user_field_11  varchar(255)                                       null,
+    user_field_12  varchar(255)                                       null,
+    user_field_13  varchar(255)                                       null,
+    user_field_14  varchar(255)                                       null,
+    user_field_15  varchar(255)                                       null,
+    user_field_16  varchar(255)                                       null,
+    user_field_17  varchar(255)                                       null,
+    user_field_18  varchar(255)                                       null,
+    user_field_19  varchar(255)                                       null,
+    user_field_20  varchar(255)                                       null,
+    regist_date    datetime             default '0000-00-00 00:00:00' not null,
+    update_date    datetime             default '0000-00-00 00:00:00' not null,
+    status         int(10)              default 0                     not null,
+    memo           text                                               null,
+    lineworks_flag enum ('N', 'Y', 'T') default 'N'                   not null
+);
+
