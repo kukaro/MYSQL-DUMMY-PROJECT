@@ -168,8 +168,8 @@ create table cs.user_inquiry
     user_field_18  varchar(255)                                       null,
     user_field_19  varchar(255)                                       null,
     user_field_20  varchar(255)                                       null,
-    regist_date    datetime             default '0000-00-00 00:00:00' not null,
-    update_date    datetime             default '0000-00-00 00:00:00' not null,
+    regist_date    datetime             DEFAULT CURRENT_TIMESTAMP     not null,
+    update_date    datetime             DEFAULT CURRENT_TIMESTAMP     not null,
     status         int(10)              default 0                     not null,
     memo           text                                               null,
     lineworks_flag enum ('N', 'Y', 'T') default 'N'                   not null
